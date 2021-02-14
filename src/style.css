@@ -1,0 +1,116 @@
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+  color: #1d6ec5;
+  font-weight: 300;
+  text-align: center;
+  padding: 20px 0 10px;
+}
+
+form {
+  text-align: center;
+}
+
+h2 {
+  color: #ec3d6b;
+  text-align: center;
+  padding-top: 20px;
+}
+
+p {
+  color: #1e70c6;
+}
+
+hr {
+  border: 3px solid #66a8dc;
+  border-radius: 10px;
+}
+
+.weather-app {
+  background-image: linear-gradient(-225deg, #fffeff 0%, #d7fffe 100%);
+  border: solid;
+  border-color: #5ac2f0;
+  border-radius: 30px;
+  padding: 20px;
+  margin: 50px 425px;
+  max-width: 600px;
+}
+
+.btn-success {
+  display: block;
+  position: relative;
+  left: 320px;
+  bottom: 20px;
+}
+
+.current-date {
+  display: block;
+  text-align: center;
+  font-size: 18px;
+}
+
+.current-temp {
+  display: block;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 900;
+  color: #5a6275;
+}
+
+.current-scale {
+  font-size: 20px;
+  position: relative;
+  bottom: 20px;
+}
+.current-temp .fa-cloud {
+  font-size: 70px;
+}
+
+.current-feels-like {
+  display: block;
+  text-align: center;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 18px;
+}
+
+.current-temp-emoji {
+  font-size: 80px;
+}
+
+.monday,
+.tuesday,
+.wednesday,
+.thursday,
+.friday,
+.saturday {
+  border: solid;
+  border-color: #cce2f3;
+  border-radius: 10px;
+}
+
+.col-2 {
+  padding: 5px;
+  text-align: center;
+}
+
+.future-date {
+  font-size: 14px;
+}
+
+.emoji {
+  font-size: 50px;
+}
+
+.future-temp {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.feels-like {
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 700;
+}
