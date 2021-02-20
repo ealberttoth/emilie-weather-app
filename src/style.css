@@ -64,9 +64,6 @@ hr {
   position: relative;
   bottom: 20px;
 }
-.current-temp .fa-cloud {
-  font-size: 70px;
-}
 
 .current-feels-like {
   display: block;
