@@ -31,10 +31,19 @@ currentDate.innerHTML = formatDate(today);
 function showTemperature(response){
   let temperature = Math.round(response.data.main.temp);
   let currentTemp = document.querySelector("#current-temp");
-  currentTemp.innerHTML = (temperature);
   let feelsLike = Math.round(response.data.main.feels_like);
   let currentFeelsLike = document.querySelector("#current-feels-like");
+  let currentDescription = document.querySelector("#current-description");
+  let currentPercipitation = document.querySelector("#percipitation");
+  let currentHumidity = document.querySelector("#humidity");
+  let currentWind = document.querySelector("#wind");
+ 
+  currentTemp.innerHTML = (temperature);
   currentFeelsLike.innerHTML = (`Feels like ${feelsLike} °C`);
+  currentDescription.innerHTML = response.data.weather[0].description;
+  currentPercipitation.innerHTML = response.data.main.percipitation;
+  currentHumidity.innerHTML = response.data.main.humidity;
+  currentWind.innerHTML = Math.round(response.data.wind.speed);
 }
   
 

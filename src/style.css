@@ -28,6 +28,13 @@ hr {
   border-radius: 10px;
 }
 
+li {
+  list-style: none;
+}
+
+li:first-letter {
+  text-transform: capitalize;
+}
 .weather-app {
   background-image: linear-gradient(-225deg, #fffeff 0%, #d7fffe 100%);
   border: solid;
@@ -65,14 +72,6 @@ hr {
   font-size: 20px;
   position: relative;
   bottom: 20px;
-}
-
-.current-feels-like {
-  display: block;
-  text-align: center;
-  font-style: italic;
-  font-size: 20px;
-  line-height: 18px;
 }
 
 .current-temp-emoji {
