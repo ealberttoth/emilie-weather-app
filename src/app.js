@@ -62,19 +62,6 @@ function searchCity(event){
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", searchCity);
 
-function showCurrentTemperature(response) {
-  let city = response.data.name;
-  let h2 = document.querySelector("h2");
-  let temperature = Math.round(response.data.main.temp);
-  let currentTemp = document.querySelector("#current-temp");
-  let feelsLike = Math.round(response.data.main.feels_like);
-  let currentFeelsLike = document.querySelector("#current-feels-like");
-  
-  h2.innerHTML = (city);
-  currentTemp.innerHTML = (temperature);
-  currentFeelsLike.innerHTML = (`Feels like ${feelsLike} °C`);
-}
-
 function showPosition(position) {
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
@@ -91,3 +78,13 @@ navigator.geolocation.getCurrentPosition(showPosition);
 
 let button = document.querySelector("#current-button");
 button.addEventListener("click", getCurrentPosition);
+
+function showFahrenheitTemperature(event){
+  event.preventDefault();
+  let currentTemp = document.querySelector("#current-temp");
+  let fahrenheitTemp = (currentTemp.innerHTML * 9) / 5 + 32;
+  currentTemp.innerHTML = Math.round(fahrenheitTemp);
+}
+
+let fahrenheitLink = document.querySelector("#current-fahrenheit");
+fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
