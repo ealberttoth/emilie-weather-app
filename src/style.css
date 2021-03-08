@@ -68,6 +68,11 @@ li:first-letter {
   line-height: 1;
 }
 
+.current-temp .active {
+  color: #5a6275;
+  cursor: default;
+}
+
 .current-scale {
   font-size: 20px;
   position: relative;

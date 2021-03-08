@@ -36,6 +36,8 @@ function showTemperature(response){
   let currentHumidity = document.querySelector("#humidity");
   let currentWind = document.querySelector("#wind");
   let currentIcon = document.querySelector("#icon");
+
+  celsuisTemp = response.data.main.temp;
  
   currentTemp.innerHTML = (temperature);
   currentFeelsLike.innerHTML = (`Feels like ${feelsLike} °C`);
@@ -79,12 +81,28 @@ navigator.geolocation.getCurrentPosition(showPosition);
 let button = document.querySelector("#current-button");
 button.addEventListener("click", getCurrentPosition);
 
+
+function showCelsiusTemperature(event){
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let currentTemp = document.querySelector("#current-temp");
+  currentTemp.innerHTML = Math.round(celsuisTemp);
+}
+
 function showFahrenheitTemperature(event){
   event.preventDefault();
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
   let currentTemp = document.querySelector("#current-temp");
-  let fahrenheitTemp = (currentTemp.innerHTML * 9) / 5 + 32;
+  let fahrenheitTemp = (celsuisTemp * 9) / 5 + 32;
   currentTemp.innerHTML = Math.round(fahrenheitTemp);
 }
+
+let celsuisTemp = null;
+
+let celsiusLink = document.querySelector("#current-celsius");
+celsiusLink.addEventListener("click", showCelsiusTemperature);
 
 let fahrenheitLink = document.querySelector("#current-fahrenheit");
 fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
