@@ -30,22 +30,22 @@ currentDate.innerHTML = formatDate(today);
 function showTemperature(response){
   let temperature = Math.round(response.data.main.temp);
   let currentTemp = document.querySelector("#current-temp");
-  let feelsLike = Math.round(response.data.main.feels_like);
-  let currentFeelsLike = document.querySelector("#current-feels-like");
   let currentDescription = document.querySelector("#current-description");
   let currentHumidity = document.querySelector("#humidity");
   let currentWind = document.querySelector("#wind");
   let currentIcon = document.querySelector("#icon");
+  let h2 = document.querySelector("h2");
+
 
   celsuisTemp = response.data.main.temp;
  
   currentTemp.innerHTML = (temperature);
-  currentFeelsLike.innerHTML = (`Feels like ${feelsLike} °C`);
   currentDescription.innerHTML = response.data.weather[0].description;
   currentHumidity.innerHTML = response.data.main.humidity;
   currentWind.innerHTML = Math.round(response.data.wind.speed);
   currentIcon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   currentIcon.setAttribute("alt", response.data.weather[0].description);
+  h2.innerHTML = response.data.name;
 }
   
 
@@ -70,7 +70,8 @@ function showPosition(position) {
   let units = "metric";
   let apiKey = "28c3ae709e1f96587f82b0797ade3e71";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
-  axios.get(apiUrl).then(showCurrentTemperature);
+  
+  axios.get(apiUrl).then(showTemperature);
 }
 
 function getCurrentPosition() {

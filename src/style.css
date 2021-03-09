@@ -14,7 +14,7 @@ form {
 }
 
 h2 {
-  color: #ec3d6b;
+  color: #ec6e4c;
   text-align: center;
   padding-top: 20px;
 }
@@ -30,11 +30,13 @@ hr {
 
 li {
   list-style: none;
+  color: #5a6275;
 }
 
 li:first-letter {
   text-transform: capitalize;
 }
+
 .weather-app {
   background-image: linear-gradient(-225deg, #fffeff 0%, #d7fffe 100%);
   border: solid;
@@ -54,15 +56,16 @@ li:first-letter {
 
 .current-date {
   display: block;
+  color: #5a6275;
   text-align: center;
-  font-size: 18px;
+  font-size: 20px;
   margin-bottom: 15px;
 }
 
 .current-temp {
   display: block;
   text-align: center;
-  font-size: 50px;
+  font-size: 60px;
   font-weight: 900;
   color: #5a6275;
   line-height: 1;
@@ -84,44 +87,13 @@ li:first-letter {
   margin-left: 15px;
 }
 
-.monday,
-.tuesday,
-.wednesday,
-.thursday,
-.friday,
-.saturday {
-  border: solid;
-  border-color: #cce2f3;
-  border-radius: 10px;
-}
-
-.col-2 {
-  padding: 5px;
-  text-align: center;
-}
-
-.future-date {
-  font-size: 14px;
-}
-
-.emoji {
-  font-size: 50px;
-}
-
-.future-temp {
+#current-description {
+  color: #5a6275;
   font-size: 20px;
-  font-weight: 700;
 }
-
-.feels-like {
-  font-size: 14px;
-  font-style: italic;
-  font-weight: 700;
-}
-
 .open-source-code {
   display: block;
   position: relative;
-  left: 425px;
+  left: 450px;
   bottom: 40px;
 }
